@@ -40,8 +40,7 @@
 // });
 const express = require('express');
 const mongoose = require('mongoose');
-const mongoURI = process.env.MONGO_URI || 'mongodb://127.0.0.1:27017/bookstore';
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://127.0.0.1:27017/bookstore')
     .then(() => console.log('Connected to MongoDB'))
     .catch(err => console.log(err));
 
